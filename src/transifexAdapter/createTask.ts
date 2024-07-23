@@ -3,6 +3,8 @@ import {baseTransifexUrl, projOrgSlug, getHeaders} from './helpers'
 import {getTranslationTask} from './getTranslationTask'
 
 const createResource = (doc: Record<string, any>, documentId: string, secrets: Secrets | null) => {
+  // eslint-disable-next-line no-console
+  console.log('Document to be serialized', doc)
   const resourceCreateBody = {
     data: {
       attributes: {
